@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Container, Grid, Paper, Typography, useMediaQuery } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import StorageIcon from "@mui/icons-material/Storage";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
@@ -21,6 +21,7 @@ const services = [
     text: "Páginas diseñadas para vender con alta efectividad.",
   },
 ];
+
 
 export default function Services() {
     const isMdDown = useMediaQuery((theme: any) => theme.breakpoints.down("md"));
