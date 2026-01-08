@@ -23,6 +23,8 @@ const services = [
 ];
 
 export default function Services() {
+    const isMdDown = useMediaQuery((theme: any) => theme.breakpoints.down("md"));
+
   return (
     <Box sx={{ backgroundColor: "#f8fafc", py: 12 }}>
       <Container sx={{alignContent:'center', alignItems:'center'}}>
@@ -53,7 +55,7 @@ export default function Services() {
 
         <Grid container spacing={4}>
           {services.map((service, index) => (
-            <Grid size={4} key={index}>
+            <Grid size={isMdDown ? 12 : 4} key={index}>
               <Paper elevation={2} sx={{ p: 4, borderRadius: 4 , textAlign: 'center' }}>
                 {service.icon}
                 <Typography variant="h6" fontWeight="bold" mt={2}>
